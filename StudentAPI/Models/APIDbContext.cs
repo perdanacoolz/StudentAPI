@@ -5,8 +5,15 @@ namespace StudentAPI.Models
 {
     public class APIDbContext: IdentityDbContext<IdentityUser>
     {
-        public APIDbContext(DbContextOptions option):base(option)
+        public APIDbContext(DbContextOptions<APIDbContext> option):base(option)
         { }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+        }
+
+        
+
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

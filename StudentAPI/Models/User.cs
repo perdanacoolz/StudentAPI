@@ -4,13 +4,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace StudentAPI.Models
 {
-    public class User: IdentityUser
+    public class User
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+       // [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
        // [Column(TypeName = "nvarchar(36)")]
 
-        public Guid Id { get; set; }
+        public int Id { get; set; }
 
         [Required]
         [Column(TypeName = "nvarchar(255)")]
